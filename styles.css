@@ -1,24 +1,34 @@
-*{
+*,*::before,*::after{
     margin:0;
     padding:0;
     box-sizing:border-box; /*if not applied then default one will be applied content-box means */
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 :root{
     /*colors*/
-    --color-primary: ;
-    --color-text: ;
-    --color-bg: ;
-    --color-border: ;
-    --color-nav-btn-bg: ;
-    --color-nav-btn-text: ;
+    --color-text:#262A2E;
+    --color-bg:#FFFFFF;
+    --color-border:#E5E7EB;
+    --color-nav-btn-bg:#2B3990;
+    --color-nav-btn-text:#FFFFFF;
 
     /*Font*/
-    --font-main: ;
+    --font-main:'Inter',sans-serif ;
 
-    /*Spacing*/
+    /*Layout*/
     --max-width:1240px;
     --page-padding:100px;
+}
+
+body{
+    font-family: 'Inter',sans-serif;
+    background-color: #FFFFFF;
+    color: #262A2E;
+    -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -35,6 +45,101 @@ ul {
   list-style: none;
 }
 
+.container{
+    width:100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--page-padding);
+}
 
+.main-nav{
+    width: 100%;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+}
 
+.nav-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 77px;
+}
 
+.nav-logo img {
+  width: 109px; 
+  height: 45px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;       /* gap between About Us, Products, Contact */
+}
+
+.nav-links a {
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.06em;
+  color: var(--color-text);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-nav-btn-bg);
+}
+
+.nav-dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;        /* gap between "Products" text and chevron arrow */
+}
+
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.btn-contact{
+    display: inline-flex;
+    justify-content: center;
+    width: 107px;
+    height: 44px;
+    padding: 12px 16px;
+    background-color: var(--color-nav-btn-bg);
+    color: var(--color-nav-btn-text) !important;
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-contact:hover {
+  background-color: #1e2a6e;  /* slightly darker on hover */
+}
+
+.hamburger-btn{
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.hamburger-btn span{
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}

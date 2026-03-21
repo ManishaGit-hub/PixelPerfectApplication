@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mangalam HDPE Pipes</title>
     <link rel="stylesheet" href="./styles.css">
     <!--font style in navbar-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,21 +15,21 @@
     Contains: Logo (left) + Nav links + Contact button (right)
     a sticky header appears after scrolling beyond first fold and it disappears again when scrolling back
     Note: in the first fold , this main navigation will be shown after the first fold the sticky header appears with smooth transition from top-->
-    <header>
-        <nav>
-            <div>
-                <div>
+    <header id="mainHeader">
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-inner">
                     <!-- Logo Left Side-->
-                    <a href=""><img src="assets/images/Mangalam.png" alt="Mangalam HDPE Pipes Logo"></a>
+                    <a href="#" class="nav-logo"><img src="assets/images/Mangalam.png" alt="Mangalam HDPE Pipes Logo"></a>
                     <!-- Nav links right side -->
-                    <ul>
+                    <ul class="nav-links">
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#products">Products</a>
-                        <img src="assets/icons/CaretRight.svg" alt=""></li>
-                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#products" class="nav-dropdown-trigger">Products
+                        <img src="assets/icons/CaretRight.svg" alt="" class="dropdown-icon"></a></li>
+                        <li><a href="#contact" class="btn-contact">Contact Us</a></li>
                     </ul>
                     <!-- Hamburger button — only visible on mobile -->
-                    <button id="hamburgerBtn">
+                    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu">
                         <span></span>
                         <span></span>
                         <span></span>
