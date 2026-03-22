@@ -213,7 +213,6 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: 100px;
   align-items: start;
-  margin-bottom: 80px; /* gap between grid and trust bar */
 }
 
 .carousel-section {
@@ -520,5 +519,36 @@ a {
 .btn-secondary:hover {
   background: #2B3990;
   color: #FFFFFF !important;
+}
+
+
+.trust-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width:100%;
+  margin-top: 80px;
+}
+
+.trust-label {
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 400;
+  color: #6A7077;
+  text-align: center;
+}
+
+.trust-logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.trust-logos img {
+  height: 32.11px;
+  width: 121.85px;
+  object-fit: contain;
 }
 
