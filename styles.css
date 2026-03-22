@@ -688,3 +688,112 @@ a {
 .btn-download:hover .btn-download__icon {
   filter: invert(1);
 }
+
+/* BUILT TO LAST SECTION */
+.built-to-last {
+  width: 100%;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E1E3E8;
+  padding: 100px 0;
+}
+
+.built-to-last__heading-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;            /* gap between heading and subtitle */
+  margin-bottom: 56px;  /* gap between heading area and grid */
+}
+
+.built-to-last__title {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0px;
+  color: #0D0D0D;
+  max-width: 800px;
+}
+
+.built-to-last__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: -0.006em;
+  color: #6A7077;
+  max-width: 800px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+  gap: 24px;                           /* gap both horizontal and vertical */
+  max-width: 1240px;
+  margin-bottom: 56px;                 /* gap between grid and button */
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;                /* gap between elements inside card */
+  padding: 20px;
+  background: #FFFFFF;
+  border: 1px solid #CFD1D4;
+  border-radius: 16px;      /* Radius/16 = 16px confirmed */
+  box-shadow: 0px 2px 4px 0px #1B1C1D0A;
+}
+
+.feature-card__icon {
+  width: 32px;
+  height: 32px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.feature-card__title {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0px;
+  color: #0D0D0D;
+}
+
+.feature-card__desc {
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.006em;
+  color: #535A61;
+}
+
+.built-to-last__cta {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-request-quote {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 174px;
+  height: 52px;
+  padding: 16px 24px;
+  background: #2B3990;
+  color: #FFFFFF !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.006em;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-request-quote:hover {
+  background: #1e2a6e;
+}
