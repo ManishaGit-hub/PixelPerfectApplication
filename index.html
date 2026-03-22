@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--font style for product title-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!--Main Navigation
@@ -47,70 +51,70 @@
         - Breadcrumb (Products > Two For One Twister)
         - Left side: Image carousel + thumbnails
         - Right side: Product info, price, CTA buttons-->
-        <section>
-            <div>
+        <section class="first-fold" id="firstFold">
+            <div class="container">
                 <!-- BREADCRUMB Shows navigation path: Products > Two For One Twister-->
-                <nav>
-                    <a href="">Products</a>
-                    <span><img src="assets/icons/CaretRight1.svg" alt=""></span>
-                    <span>Two For One Twister</span>
+                <nav class="breadcrumb" aria-label="breadcrumb">
+                    <a href="#" class="breadcrumb-link">Products</a>
+                    <span class="breadcrumb-separator"><img src="assets/icons/CaretRight1.svg" alt=""></span>
+                    <span class="breadcrumb-current">Two For One Twister</span>
                 </nav>
                 <!-- BREADCRUMB ends-->
                  <!-- TWO COLUMN GRID (Left column  → Image carousel , Right column → Product information-->
-                <div>
+                <div class="product-grid">
                     <!--LEFT COLUMN: CAROUSEL-->
-                    <div>
+                    <div class="carousel-section">
                         <!-- Main image display area -->
-                        <div>
+                        <div class="carousel-stage">
                             <!-- Previous arrow button -->
-                            <button><img src="assets/icons/arrowLeft.svg" alt=""></button>
+                            <button class="carousel-arrow arrow-prev" id="prevBtn" aria-label="Previous image"><img src="assets/icons/arrowLeft.svg" alt="Previous"></button>
                             <!-- Carousel slides Only one slide is visible at a time-->
-                            <div>
-                                <div>
+                            <div class="carousel-slides" id="carouselSlides">
+                                <div class="carousel-slide active">
                                     <img src="assets/images/carousal.jpg" alt="Fishnet Manufacturing"/>
                                 </div>
-                                <div>
+                                <div class="carousel-slide">
                                     <img src="assets/images/carousal.jpg" alt="Fishnet Manufacturing"/>
                                 </div>
-                                <div>
+                                <div class="carousel-slide">
                                     <img src="assets/images/carousal.jpg" alt="Fishnet Manufacturing"/>
                                 </div>
-                                <div>
+                                <div class="carousel-slide">
                                     <img src="assets/images/carousal.jpg" alt="Fishnet Manufacturing"/>
                                 </div>
-                                <div>
+                                <div class="carousel-slide">
                                     <img src="assets/images/carousal.jpg" alt="Fishnet Manufacturing"/>
                                 </div>
-                                <div>
+                                <div class="carousel-slide">
                                     <img src="assets/images/carousal.jpg" alt="Fishnet Manufacturing"/>
                                 </div>
                             </div>
                             <!-- carousel-slides ends -->
 
                             <!-- Next arrow button -->
-                            <button><img src="assets/icons/arrowRight.svg" alt=""></button>
+                            <button class="carousel-arrow arrow-next" id="nextBtn" aria-label="Next image"><img src="assets/icons/arrowRight.svg" alt="Next"></button>
                         </div>
                         <!-- carousel stage ends- -->
 
                         <!-- Thumbnail strip 6 small boxes below main image Clicking a thumbnail jumps to that slide-->
-                        <div>
-                            <div>
+                        <div class="carousel-thumbs" id="carouselThumbs">
+                            <div class="carousel-thumb active" data-index="0">
                                 <img src="assets/images/carousal.jpg" alt="Thumbnail 1" />
                             </div>
-                            <div>
-                                <img src="assets/images/carousal.jpg" alt="Thumbnail 1" />
+                            <div class="carousel-thumb" data-index="1">
+                                <img src="assets/images/carousal.jpg" alt="Thumbnail 2" />
                             </div>
-                            <div>
-                                <img src="assets/images/carousal.jpg" alt="Thumbnail 1" />
+                            <div class="carousel-thumb" data-index="2">
+                                <img src="assets/images/carousal.jpg" alt="Thumbnail 3" />
                             </div>
-                            <div>
-                                <img src="assets/images/carousal.jpg" alt="Thumbnail 1" />
+                            <div class="carousel-thumb" data-index="3">
+                                <img src="assets/images/carousal.jpg" alt="Thumbnail 4" />
                             </div>
-                            <div>
-                                <img src="assets/images/carousal.jpg" alt="Thumbnail 1" />
+                            <div class="carousel-thumb" data-index="4">
+                                <img src="assets/images/carousal.jpg" alt="Thumbnail 5" />
                             </div>
-                            <div>
-                                <img src="assets/images/carousal.jpg" alt="Thumbnail 1" />
+                            <div class="carousel-thumb" data-index="5">
+                                <img src="assets/images/carousal.jpg" alt="Thumbnail 6" />
                             </div>
                         </div>
                         <!--carousel-thumbs ends-->
@@ -118,19 +122,19 @@
                     <!--LEFT COLUMN (carousel-section) ends-->
 
                     <!--RIGHT COLUMN: PRODUCT INFO-->
-                    <div>
+                    <div class="product-info">
                         <!-- Certification badges row-->
-                        <div>
-                            <span><img src="assets/icons/BIS.svg" alt="" />BIS Certified</span>
-                            <span><img src="assets/icons/ISO.svg" alt="" />ISO Certified</span>
-                            <span><img src="assets/icons/CE.svg" alt="" />CE Certified</span>
+                        <div class="certifications">
+                            <span class="cert-badge"><img src="assets/icons/BIS.svg" alt="" />BIS Certified</span>
+                            <span class="cert-badge"><img src="assets/icons/ISO.svg" alt="" />ISO Certified</span>
+                            <span class="cert-badge"><img src="assets/icons/CE.svg" alt="" />CE Certified</span>
                         </div>
                         <!-- certifications ends -->
                         <!-- Product title -->
-                        <h1>Premium HDPE Pipes &amp; Coils for Modern Infrastructure</h1>
+                        <h1 class="product-title">Premium HDPE Pipes &amp; Coils for Modern Infrastructure</h1>
 
                         <!-- Product features list Blue dot bullet points from Figma-->
-                        <ul>
+                        <ul class="features-list">
                             <li>Leak-Proof Fusion Joints</li>
                             <li>Chemical Resistance</li>
                             <li>50+ Year Service Life</li>
@@ -140,46 +144,41 @@
                         <!-- features-list ends-->
 
                         <!-- Price box Contains price range + shipping tags + certifications text-->
-                        <div>
-                            <p>Price Range</p>
-                            <p>₹4,80,000 - 7,90,000</p>
+                        <div class="price-box">
+                            <p class="price-label">Price Range</p>
+                            <p class="price-value">₹4,80,000 - 7,90,000</p>
                         
-                            <div>
-                                <span>Shipping: 6-12 days</span>
-                                <span>Returns: if returned within 7 days</span>
+                            <div class="shipping-info">
+                                <span class="shipping-tag">Shipping: 6-12 days</span>
+                                <span class="returns-tag">Returns: if returned within 7 days</span>
                             </div>
-                            <p>Certifications: ISO Certified, BIS Certified</p>
+                            <p class="cert-text">Certifications: ISO Certified, BIS Certified</p>
                         </div>
                         <!--price-box ends-->
 
                         <!-- CTA Buttons-->
-                        <div>
-                            <a href="">Get Custom Quote</a>
-                            <a href="">View Technical Specs <img src="assets/icons/CaretRight1.svg" alt=""></a>
+                        <div class="cta-buttons">
+                            <a href="#contact" class="btn-primary">Get Custom Quote</a>
+                            <a href="#specs" class="btn-secondary">View Technical Specs <img src="assets/icons/CaretRight1.svg" alt=""></a>
                         </div>
                     </div> 
                     <!--RIGHT COLUMN (product-info) ends-->  
                 </div>
                 <!--product-grid ends-->
+                <div class="trust-bar">
+                    <p class="trust-label">Trusted by Hundreds of Companies Globally</p>
+                    <div class="trust-logos">
+                        <img src="assets/images/EUROFLEX.png" alt="Euroflex">
+                        <img src="assets/images/EUROFLEX.png" alt="Euroflex">
+                        <img src="assets/images/EUROFLEX.png" alt="Euroflex">
+                        <img src="assets/images/EUROFLEX.png" alt="Euroflex">
+                        <img src="assets/images/EUROFLEX.png" alt="Euroflex">
+                        <img src="assets/images/EUROFLEX.png" alt="Euroflex">
+                    </div>
+                </div>
             </div>
         </section>
         <!--FIRST FOLD ends-->
-
-        <!--SECTION 3: TRUST BAR
-      Contains: Label text + 6 Euroflex logos in a row-->
-      <section>
-        <div>
-            <p>Trusted by Hundreds of Companies Globally</p>
-            <div>
-                <img src="assets/images/EUROFLEX.png" alt="Euroflex">
-                <img src="assets/images/EUROFLEX.png" alt="Euroflex">
-                <img src="assets/images/EUROFLEX.png" alt="Euroflex">
-                <img src="assets/images/EUROFLEX.png" alt="Euroflex">
-                <img src="assets/images/EUROFLEX.png" alt="Euroflex">
-                <img src="assets/images/EUROFLEX.png" alt="Euroflex">
-            </div>
-        </div>
-      </section>
     </main>
     <script src="./script.js"></script>
 </body>

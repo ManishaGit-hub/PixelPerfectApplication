@@ -143,3 +143,164 @@ ul {
     border-radius: 2px;
     transition: all 0.3s ease;
 }
+
+/*FIRST FOLD SECTION : Contains: breadcrumb + product grid + trust bar*/
+
+.first-fold {
+  width: 100%;
+  background: #FFFFFF;
+  border-top: 1px solid #E1E3E8;
+  box-shadow: 0px 16px 32px -12px #585C5F1A;
+  padding: 100px 0;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 48px;
+}
+
+
+.breadcrumb-link {
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.006em;
+  color: #4D545C;
+}
+
+.breadcrumb-link:hover {
+  color: #2B3990;
+}
+
+.breadcrumb-separator {
+  color: #262A2E;
+  font-size: 14px;
+}
+
+.breadcrumb-current {
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.006em;
+  color: #0D0D0D;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 570px 570px;
+  gap: 100px;
+  align-items: start;
+  margin-bottom: 80px; /* gap between grid and trust bar */
+}
+
+.carousel-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* gap between carousel stage and thumbnails */
+  width: 570px;
+}
+
+.carousel-stage {
+  position: relative;
+  width: 570px;
+  height: 570px;
+  border-radius: 24px;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0px 20px 40px -8px #585C5F33;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.carousel-slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px; /* slightly less than stage to account for border */
+}
+
+.carousel-arrow {
+  position: relative;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #FFFFFFDB;
+  border: 1px solid #E1E3E8;
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.carousel-arrow:hover {
+  background: #FFFFFF;
+}
+
+.carousel-arrow img{
+  width:50px;
+  height:50px;
+  object-fit:contain;
+}
+
+/* Thumbnail strip — 6 small boxes */
+.carousel-thumbs {
+  display: flex;
+  gap: 20px; /* gap between thumbnails */
+}
+
+
+.carousel-thumb {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  border: 1px solid #CFD1D4;
+  background: #FFFFFF;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.carousel-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-thumb:hover {
+  border-color: #2B3990;
+}
+
+/* Active thumbnail — highlighted with blue border */
+.carousel-thumb.active {
+  border: 2px solid #2B3990;
+}
+
