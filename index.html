@@ -462,12 +462,196 @@
         </section>
         <!--Versatile applications ends-->
 
-        <!--
-  SECTION: ADVANCED HDPE PIPE MANUFACTURING PROCESS
+        <!--SECTION MANUFACTURING PROCESS
   Contains: Heading + Subtitle + Tabs + Content Area-->
-        <section>
+        <section class="manufacturing-section has-texture" id="manufacturing">
+            <div class="container">
+
+                <!-- Heading and subtitle container -->
+                <div class="manufacturing-section__heading-area">
+                    <h2 class="manufacturing-section__title">Advanced HDPE Pipe Manufacturing Process</h2>
+                    <p class="manufacturing-section__subtitle">Our state-of-the-art extrusion technology ensures consistent quality, optimal material properties, and dimensional accuracy in every pipe we manufacture.</p>
+                </div>
+                <!-- Tab bar + Content area container -->
+                <div class="manufacturing-card">
+                    <!-- Tab bar -->
+                    <div class="manufacturing-tabs" id="manufacturingTabs">
+                        <div class="manufacturing-tabs__line"></div>
+                        <button class="mfg-tab mfg-tab--active" data-tab="raw-material">Raw Material</button>
+                        <button class="mfg-tab" data-tab="extrusion">Extrusion</button>
+                        <button class="mfg-tab" data-tab="cooling">Cooling</button>
+                        <button class="mfg-tab" data-tab="sizing">Sizing</button>
+                        <button class="mfg-tab" data-tab="quality">Quality Control</button>
+                        <button class="mfg-tab" data-tab="marking">Marking</button>
+                        <button class="mfg-tab" data-tab="cutting">Cutting</button>
+                        <button class="mfg-tab" data-tab="packaging">Packaging</button>
+                    </div>
+                    
+                    <!--content area-->
+                    <div class="manufacturing-content"> 
+
+                        <!-- Raw Material Panel -->
+                        <div class="mfg-panel mfg-panel--active" id="panel-raw-material"> 
+                            <div class="mfg-panel__inner">
+
+                                <!-- Left side -->
+                                <div class="mfg-panel__left">
+                                    <div class="mfg-panel__text-area">
+                                        <h3 class="mfg-panel__heading">High-Grade Raw Material Selection</h3>
+                                        <p class="mfg-panel__desc">Vacuum sizing tanks ensure precise outer diameter while internal pressure maintains perfect roundness and wall thickness uniformity.</p>
+                                    </div>
+                                    <div class="mfg-panel__points">
+                                        <div class="mfg-point">
+                                            <img src="assets/icons/CheckCircle.svg" alt="" />
+                                            <span>PE100 grade material</span>
+                                        </div>
+                                        <div class="mfg-point">
+                                            <img src="assets/icons/CheckCircle.svg" alt="" />
+                                            <span>Optimal molecular weight distribution</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right side image -->
+                                <div class="mfg-panel__right">
+                                    <div class="mfg-panel__image-wrapper">
+                                        <img src="assets/images/fishnetBottom.jpg" alt="Raw Material Selection" class="mfg-panel__image"/>
+                                        <!-- Left arrow -->
+                                        <button class="mfg-arrow mfg-arrow--prev" aria-label="Previous">
+                                            <img src="assets/icons/ArrowLeftIcon.svg" alt="Previous" />
+                                        </button>
+                                        <!-- Right arrow -->
+                                        <button class="mfg-arrow mfg-arrow--next" aria-label="Next">
+                                            <img src="assets/icons/ArrowRightIcon.svg" alt="Next" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: MANUFACTURING SECTION -->
+
+        <!--SECTION: TRUSTED PERFORMANCE
+  Contains: Heading + Subtitle + Testimonial Cards Carousel-->
+        <section class="testimonials-section has-texture" id="testimonials">
+            <div class="container">
+
+                <!-- Heading + subtitle -->
+                <div class="testimonials-section__heading-area">
+                    <h2 class="testimonials-section__title">Trusted Performance. Proven Results</h2>
+                    <p class="testimonials-section__subtitle">From innovative Two-For-One Twisters to specialized heat setting machines, we deliver complete solutions for modern textile manufacturing.</p>
+                </div>
+
+            </div>
+
+            <!-- Cards outside container — full width -->
+            <div class="testimonials-cards-wrapper">
+                <div class="testimonials-cards" id="testimonialsCards">
+
+                    <!-- Card 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__top">
+                            <img src="assets/icons/“.svg" alt="" class="testimonial-card__quote" />
+                            <h3 class="testimonial-card__heading">Revolutionized our FIBC production efficiency!</h3>
+                            <p class="testimonial-card__desc">Meera Industries' TFO machines have revolutionized our FIBC production efficiency. The precision engineering delivers the consistent yarn strength critical for our bulk container applications.</p>
+                        </div>
+                        <div class="testimonial-card__bottom">
+                            <div class="testimonial-card__avatar"></div>
+                            <div class="testimonial-card__person">
+                                <span class="testimonial-card__name">Johann Mueller</span>
+                                <span class="testimonial-card__role">Production Director</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__top">
+                            <img src="assets/icons/“.svg" alt="" class="testimonial-card__quote" />
+                            <h3 class="testimonial-card__heading">Revolutionized our FIBC production efficiency!</h3>
+                            <p class="testimonial-card__desc">Meera Industries' TFO machines have revolutionized our FIBC production efficiency. The precision engineering delivers the consistent yarn strength critical for our bulk container applications.</p>
+                        </div>
+                        <div class="testimonial-card__bottom">
+                            <div class="testimonial-card__avatar"></div>
+                            <div class="testimonial-card__person">
+                                <span class="testimonial-card__name">Johann Mueller</span>
+                                <span class="testimonial-card__role">Production Director</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__top">
+                            <img src="assets/icons/“.svg" alt="" class="testimonial-card__quote" />
+                            <h3 class="testimonial-card__heading">Excellent support for specialized applications.</h3>
+                            <p class="testimonial-card__desc">The durability and performance of Meera's fishnet processing equipment has significantly improved our marine product quality. Excellent support for specialized applications.</p>
+                        </div>
+                        <div class="testimonial-card__bottom">
+                            <div class="testimonial-card__avatar"></div>
+                            <div class="testimonial-card__person">
+                                <span class="testimonial-card__name">Carlos Mendoza</span>
+                                <span class="testimonial-card__role">Operations Manager</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__top">
+                            <img src="assets/icons/“.svg" alt="" class="testimonial-card__quote" />
+                            <h3 class="testimonial-card__heading">Excellent support for specialized applications.</h3>
+                            <p class="testimonial-card__desc">The durability and performance of Meera's fishnet processing equipment has significantly improved our marine product quality. Excellent support for specialized applications.</p>
+                        </div>
+                        <div class="testimonial-card__bottom">
+                            <div class="testimonial-card__avatar"></div>
+                            <div class="testimonial-card__person">
+                                <span class="testimonial-card__name">Carlos Mendoza</span>
+                                <span class="testimonial-card__role">Operations Manager</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__top">
+                            <img src="assets/icons/“.svg" alt="" class="testimonial-card__quote" />
+                            <h3 class="testimonial-card__heading">Provides the exact specifications we need!</h3>
+                            <p class="testimonial-card__desc">For our technical textile applications, Meera's specialized machinery provides the exact specifications we need. Their understanding of automotive textile requirements is exceptional.</p>
+                        </div>
+                        <div class="testimonial-card__bottom">
+                            <div class="testimonial-card__avatar"></div>
+                            <div class="testimonial-card__person">
+                                <span class="testimonial-card__name">Rajesh Kumar</span>
+                                <span class="testimonial-card__role">Manufacturing Head</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__top">
+                            <img src="assets/icons/“.svg" alt="" class="testimonial-card__quote" />
+                            <h3 class="testimonial-card__heading">Provides the exact specifications we need!</h3>
+                            <p class="testimonial-card__desc">For our technical textile applications, Meera's specialized machinery provides the exact specifications we need. Their understanding of automotive textile requirements is exceptional.</p>
+                        </div>
+                        <div class="testimonial-card__bottom">
+                            <div class="testimonial-card__avatar"></div>
+                            <div class="testimonial-card__person">
+                                <span class="testimonial-card__name">Rajesh Kumar</span>
+                                <span class="testimonial-card__role">Manufacturing Head</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
         </section>
+
     </main>
     <script src="./script.js"></script>
 </body>

@@ -92,3 +92,32 @@
   });
 
 })();
+
+
+/* ============================================================
+   TESTIMONIALS CAROUSEL — positioning only
+   No arrows, just sets correct initial position
+============================================================ */
+(function initTestimonialsCarousel() {
+  const track = document.getElementById('testimonialsCards');
+  if (!track) return;
+
+  const cardWidth = 420;
+  const cardGap   = 24;
+
+  function setPosition() {
+    const screenWidth   = window.innerWidth;
+    const twoFullCards  = 2 * cardWidth;     /* 840px */
+    const threeGaps     = 3 * cardGap;       /* 72px */
+    const remaining     = screenWidth - twoFullCards - threeGaps;
+    const eachPartial   = remaining / 2;
+    const hiddenPartial = cardWidth - eachPartial;
+    const offset        = cardWidth + cardGap + hiddenPartial;
+
+    track.style.transform = 'translateX(-' + offset + 'px)';
+  }
+
+  setPosition();
+
+  window.addEventListener('resize', setPosition);
+})();
