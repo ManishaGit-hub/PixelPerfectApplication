@@ -167,3 +167,63 @@ document.addEventListener("keydown", (e) => {
     document.body.style.overflow = "auto";
   }
 });
+
+
+// ================= ZOOM FEATURE =================
+
+const carouselStage = document.querySelector(".carousel-stage");
+const zoomPreview = document.getElementById("zoomPreview");
+
+// get current active image
+function getActiveImage() {
+  return document.querySelector(".carousel-slide.active img");
+}
+
+// SHOW zoom
+carouselStage.addEventListener("mouseenter", () => {
+  const img = getActiveImage();
+  if (!img) return;
+
+  zoomPreview.style.display = "block";
+  zoomPreview.style.backgroundImage = `url(${img.src})`;
+});
+
+// HIDE zoom
+carouselStage.addEventListener("mouseleave", () => {
+  zoomPreview.style.display = "none";
+});
+
+// MOVE zoom with cursor
+carouselStage.addEventListener("mousemove", (e) => {
+  const img = getActiveImage();
+  if (!img) return;
+
+  const rect = img.getBoundingClientRect(); // ✅ FIX: use IMAGE not container
+
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  const xPercent = (x / rect.width) * 100;
+  const yPercent = (y / rect.height) * 100;
+
+  zoomPreview.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
+});
+
+// MOBILE TAP SUPPORT
+let zoomActive = false;
+
+carouselStage.addEventListener("click", () => {
+  if (window.innerWidth > 768) return;
+
+  const img = getActiveImage();
+  if (!img) return;
+
+  zoomActive = !zoomActive;
+
+  if (zoomActive) {
+    zoomPreview.style.display = "block";
+    zoomPreview.style.backgroundImage = `url(${img.src})`;
+  } else {
+    zoomPreview.style.display = "none";
+  }
+});

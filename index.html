@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!--Main Navigation
     Contains: Logo (left) + Nav links + Contact button (right)
     a sticky header appears after scrolling beyond first fold and it disappears again when scrolling back
@@ -91,6 +92,10 @@
                             </div>
                             <!-- carousel-slides ends -->
 
+                            <div class="zoom-overlay" id="zoomOverlay">
+                                <img src="assets/icons/zoom.svg" alt="Zoom" />
+                            </div>
+
                             <!-- Next arrow button -->
                             <button class="carousel-arrow arrow-next" id="nextBtn" aria-label="Next image"><img src="assets/icons/arrowRight.svg" alt="Next"/></button>
                         </div>
@@ -118,8 +123,10 @@
                             </div>
                         </div>
                         <!--carousel-thumbs ends-->
+                        <div class="zoom-preview" id="zoomPreview"></div>
                     </div>
                     <!--LEFT COLUMN (carousel-section) ends-->
+
 
                     <!--RIGHT COLUMN: PRODUCT INFO-->
                     <div class="product-info">
