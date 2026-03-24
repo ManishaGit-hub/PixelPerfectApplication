@@ -1,3 +1,38 @@
+(function initStickyHeader() {
+  var stickyHeader = document.getElementById('stickyHeader');
+  var mainHeader   = document.getElementById('mainHeader');
+  var firstFold    = document.getElementById('firstFold');
+
+  if (!stickyHeader || !mainHeader || !firstFold) return;
+
+  var foldBottom = 0;
+
+  function calcFoldBottom() {
+    foldBottom = firstFold.offsetTop + firstFold.offsetHeight;
+  }
+
+  function onScroll() {
+    if (window.scrollY > foldBottom) {
+      stickyHeader.classList.add('visible');
+      mainHeader.classList.add('hidden-under-sticky');
+    } else {
+      stickyHeader.classList.remove('visible');
+      mainHeader.classList.remove('hidden-under-sticky');
+    }
+  }
+
+  calcFoldBottom();
+  onScroll();
+
+  window.addEventListener('resize', function () {
+    calcFoldBottom();
+    onScroll();
+  }, { passive: true });
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
+
 (function initVersatileCarousel() {
   const track   = document.getElementById('versatileCards');
   const prevBtn = document.getElementById('versatilePrev');
@@ -227,3 +262,7 @@ carouselStage.addEventListener("click", () => {
     zoomPreview.style.display = "none";
   }
 });
+
+
+
+
