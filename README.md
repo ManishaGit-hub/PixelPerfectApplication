@@ -90,3 +90,16 @@ https://www.figma.com/design/DOv07H7C2tA5UrVLhmfwfW/Gushwork-Assignment?node-id=
 ## Preview:
 
 ![First Fold](assets/images/firstfold.png)
+![Image2](assets/images/Image2.png)
+![image3](assets/images/image3.png)
+![image4](assets/images/image4.png)
+![Image5](assets/images/Image5.png)
+![Image6](assets/images/Image6.png)
+![Image7](assets/images/Image7.png)
+![Image8](assets/images/Image8.png)
+![image9](assets/images/image9.png)
+![image10](assets/images/image10.png)
+![image11](assets/images/image11.png)
+![image12](assets/images/image12.png)
+![image13](assets/images/image13.png)
+![image14](assets/images/image14.png)
