@@ -248,7 +248,7 @@
 
                 <!--Download Button-->
                 <div class="specs-download">
-                    <button class="btn-download"><img src="assets/images/Download.png" alt="" class="btn-download__icon"/>Download Full Technical Datasheet</button>
+                    <button class="btn-download" data-modal-target="catalogueModal"><img src="assets/images/Download.png" alt="" class="btn-download__icon"/>Download Full Technical Datasheet</button>
                 </div>
                 <!--Download ends-->
             </div>
@@ -299,7 +299,7 @@
                 <!--feature grid ends-->
                 <!--Request a Quote button-->
                 <div class="built-to-last__cta">
-                    <a href="#contact" class="btn-request-quote">Request a Quote</a>
+                    <a href="javascript:void(0)" class="btn-request-quote" data-modal-target="callbackModal">Request a Quote</a>
                 </div>
                 <!--CTA ends-->
             </div>
@@ -919,6 +919,76 @@
         </footer>
         <!-- END: FOOTER -->
     </main>
+    <!-- Modal: Download Catalogue -->
+    <div class="modal" id="catalogueModal">
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+
+            <!-- TOP BAR -->
+            <div class="modal-header">
+                <p class="modal-title">Let us email the entire catalogue to you</p>
+                <button class="modal-close">&times;</button>
+            </div>
+
+            <!-- BODY -->
+            <div class="modal-body">
+      
+                <div class="form-group">
+                    <label>Your Email <span>*</span></label>
+                    <input type="email" placeholder="example@gmail.com" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Your Contact (Optional)</label>
+                    <input type="tel" placeholder="+91 0000000000" />
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="modal-footer">
+                <button class="modal-submit">Download Brochure</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Request Callback Modal -->
+    <div class="modal" id="callbackModal">
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content callback-modal">
+
+            <!-- HEADER -->
+            <div class="modal-header">
+                <p class="modal-title">Request a Call Back</p>
+                <button class="modal-close">&times;</button>
+            </div>
+
+            <!-- BODY -->
+            <div class="modal-body callback-body">
+
+                <input type="text" class="callback-input" placeholder="Full Name" />
+                <input type="text" class="callback-input" placeholder="Company Name" />
+                <input type="email" class="callback-input" placeholder="Email Address" />
+
+                <!-- PHONE FIELD -->
+                <div class="phone-field">
+                    <div class="country-code">
+                        <span>+91</span>
+                        <!-- add your chevron icon here -->
+                    </div>
+                    <input type="tel" class="phone-input" placeholder="Phone Number" />
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+            <div class="modal-footer">
+                <button class="callback-submit">Submit Form</button>
+            </div>
+
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>

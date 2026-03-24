@@ -121,3 +121,49 @@
 
   window.addEventListener('resize', setPosition);
 })();
+
+
+// ===== OPEN MODALS =====
+const openButtons = document.querySelectorAll("[data-modal-target]");
+
+openButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const modalId = button.getAttribute("data-modal-target");
+    const modal = document.getElementById(modalId);
+
+    if (modal) {
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+  });
+});
+
+
+// ===== CLOSE MODALS =====
+const closeButtons = document.querySelectorAll(".modal-close");
+const overlays = document.querySelectorAll(".modal-overlay");
+
+closeButtons.forEach(btn => {
+  btn.addEventListener("click", closeModal);
+});
+
+overlays.forEach(overlay => {
+  overlay.addEventListener("click", closeModal);
+});
+
+function closeModal(e) {
+  const modal = e.target.closest(".modal");
+  modal.classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+
+
+// ===== ESC CLOSE =====
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    document.querySelectorAll(".modal.active").forEach(modal => {
+      modal.classList.remove("active");
+    });
+    document.body.style.overflow = "auto";
+  }
+});
