@@ -1509,3 +1509,215 @@ a {
   letter-spacing: 0px;
   color: #535A61;
 }
+
+/* SECTION: COMPLETE PIPING SOLUTIONS PORTFOLIO */
+
+.portfolio-section {
+    border-bottom: 1px solid #E1E3E8;
+    padding: 100px 0;
+}
+
+.portfolio-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;             /* center heading & banner within max-width */
+    gap: 56px;                       /* gap between heading block, cards, banner */
+}
+
+.portfolio__heading-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.portfolio__title {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #0D0D0D;
+    max-width: 800px;
+}
+
+.portfolio__subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0;
+    text-align: center;
+    color: #4D545C;
+    max-width: 800px;
+}
+
+.portfolio__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+}
+
+.portfolio-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    background: #FFFFFF;
+    border: 1.25px solid #CFD1D4;
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px 0px rgba(27, 28, 29, 0.04);
+    min-width: 0;                    /* prevents grid column blowout */
+}
+
+.portfolio-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;          /* ← gap between heading and subtitle from Figma */
+  width: 100%;        /* fills card inner width */
+}
+
+.portfolio-card__heading {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: #0D0D0D;
+    margin-bottom: 0;
+    width:100%;
+}
+
+.portfolio-card__subtitle {
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.006em;
+    color: #4D545C;
+    width:100%;
+}
+
+.portfolio-card__image {
+    width: 100%;
+    height: 174px;
+    border-radius: 16px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+    margin-bottom: 20px;             /* gap image↔button: 20px, all cards */
+}
+
+.portfolio-card__media--gap-large .portfolio-card__image{
+    margin-top: 54px;
+}
+
+.portfolio-card__media--gap-small .portfolio-card__image{
+    margin-top: 20px;
+}
+
+.portfolio-card__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 44px;
+    padding: 10px 24px;
+    background: rgba(43, 57, 144, 0.051);    /* #2B39900D */
+    border: 1px solid rgba(43, 57, 144, 0.239); /* #2B39903D */
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.006em;
+    color: #2B3990;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.portfolio-card__btn:hover {
+    background: rgba(43, 57, 144, 0.1);
+    border-color: rgba(43, 57, 144, 0.35);
+}
+
+.portfolio__banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #FFFFFF;
+    border: 1px solid #CFD1D4;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 0px rgba(27, 28, 29, 0.04);
+    width: calc(100% + 40px);        /* 1240px + 40px = 1280px (Figma banner width) */
+    margin-left: -20px;              /* extend 20px left beyond container */
+    margin-right: -20px;             /* extend 20px right beyond container */
+}
+
+.portfolio__banner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.portfolio__banner-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: #0D0D0D;
+}
+
+.portfolio__banner-accent {
+    color: #2B3990;
+}
+
+.portfolio__banner-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.006em;
+    color: #262A2E;
+    opacity: 0.8;
+}
+
+
+.portfolio__banner-btn {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: #2B3990;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.006em;
+    color: #FFFFFF;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.2s ease;
+}
+
+.portfolio__banner-btn:hover {
+    background: #1e2a6e;
+}
+
+.portfolio__banner-btn svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
